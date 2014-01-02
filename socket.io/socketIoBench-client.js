@@ -5,9 +5,7 @@ var http = require('http'),
 	socketIoBenchCommon = require('./socketIoBench-common'),
 	io = require('socket.io-client');
 
-var clientCount = 5000;
-
-var Clients = utils.createArray(clientCount, function () {
+var Clients = utils.createArray(socketIoBenchCommon.clientCount, function () {
 	var client = {
 		socket: io.connect('localhost', {
 			port: socketIoBenchCommon.port,

@@ -5,9 +5,7 @@ var http = require('http'),
 	utils = require('../utils/utils'),
 	fayeBenchCommon = require('./fayeBench-common');
 
-var clientCount = 5000;
-
-var Clients = utils.createArray(clientCount, function () {
+var Clients = utils.createArray(fayeBenchCommon.clientCount, function () {
 	var client = {
 		client: null,
 		id: crypto.createHash('sha1').update(crypto.randomBytes(20)).digest('hex'),

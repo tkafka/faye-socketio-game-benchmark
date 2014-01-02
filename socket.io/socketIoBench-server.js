@@ -52,7 +52,7 @@ setInterval(function () {
 				return buf + client.messages;
 			}, 0);
 
-		console.log('Broadcasting, ' + clientCount + ' clients connected, ' + utils.round2(sumMessages / clientCount) + ' messages from client (avg)');
+		console.log(run + ' Broadcasting, ' + clientCount + ' clients connected, ' + utils.round2(sumMessages / clientCount) + ' messages from client (avg)');
 		run++;
 	},
 	1000

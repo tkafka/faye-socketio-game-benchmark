@@ -48,7 +48,7 @@ setInterval(function () {
 				return buf + messages;
 			}, 0);
 
-		console.log('Broadcasting, ' + clientCount + ' clients shown up, ' + utils.round2(sumMessages / clientCount) + ' messages from client (avg)');
+		console.log(run + ' Broadcasting, ' + clientCount + ' clients shown up, ' + utils.round2(sumMessages / clientCount) + ' messages from client (avg)');
 		run++;
 	},
 	1000
