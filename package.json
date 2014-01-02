@@ -1,0 +1,21 @@
+{
+	"name": "pool-3-player-profile",
+	"version": "0.0.1",
+	"private": true,
+	"scripts": {
+		"start": "node ./server.js",
+		"test": "nodeunit ./test",
+		"nodemon": "nodemon"
+	},
+	"main": "./server.js",
+	"dependencies": {
+		"express": "*",
+		"socket.io": "*",
+		"socket.io-client": "*",
+		"faye": "*"
+	},
+	"devDependencies": {
+		"nodeunit": "*",
+		"nodemon": "*"
+	}
+}
