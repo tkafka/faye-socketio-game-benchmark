@@ -20,12 +20,12 @@ var Clients = utils.createArray(socketIoBenchCommon.clientCount, function () {
 	};
 
 	var d = domain.create();
-	d.on('error', function(e) {
+	d.on('error', function (e) {
 		client.errors.push(e);
 		console.log(e);
 	});
-	d.run(function() {
-		client.socket.on('connect', function() {
+	d.run(function () {
+		client.socket.on('connect', function () {
 			client.connected = true;
 
 			clearInterval(client.intervalId);
@@ -40,12 +40,12 @@ var Clients = utils.createArray(socketIoBenchCommon.clientCount, function () {
 				4000
 			);
 		});
-		client.socket.on('disconnect', function() {
+		client.socket.on('disconnect', function () {
 			client.connected = false;
 			clearInterval(client.intervalId);
 		});
 
-		client.socket.on('message', function(data) {
+		client.socket.on('message', function (data) {
 			client.lastRun = data.run;
 			client.responses++;
 		});

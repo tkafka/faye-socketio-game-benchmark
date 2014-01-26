@@ -5,7 +5,7 @@ var http = require('http'),
 	socketIoBenchCommon = require('./socketIoBench-common');
 
 var io = require('socket.io').listen(socketIoBenchCommon.port);
-io.set('log level',0);
+io.set('log level', 0);
 
 var clients = {};
 
@@ -27,7 +27,7 @@ io.sockets.on('connection', function (socket) {
 	socket.on('disconnect', function (data) {
 		// slow but so what
 		var clientsDeleted = [];
-		utils.objForEach(clients, function(client, id, clients) {
+		utils.objForEach(clients, function (client, id, clients) {
 			if (client.socket == socket) {
 				delete clients[id];
 				clientsDeleted.push(id);

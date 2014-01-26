@@ -16,11 +16,11 @@ var Clients = utils.createArray(fayeBenchCommon.clientCount, function () {
 	};
 
 	var d = domain.create();
-	d.on('error', function(e) {
+	d.on('error', function (e) {
 		client.errors.push(e);
 		console.log(e);
 	});
-	d.run(function() {
+	d.run(function () {
 		client.client = new Faye.Client('http://localhost:' + fayeBenchCommon.port + '/', {
 			timeout: 30 // should be larger than server timeout
 		});
